@@ -29,14 +29,14 @@ export default function HeroSection() {
   const nameStart = text.indexOf("Arnav Singh");
 
   return (
-    <section id="about" className="min-h-screen relative overflow-hidden">
+    <section id="about" className="min-h-screen relative overflow-visible">
       <HeroBackground />
 
       {/* Content */}
-      <div className="container mx-auto px-4 h-screen flex items-center justify-center">
+      <div className="container mx-auto px-4 flex items-center justify-center min-h-screen">
         <div className="text-center space-y-8" ref={scope}>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="inline-flex">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-snug">
+            <span className="inline-block">
               {text
                 .slice(0, nameStart)
                 .split("")
@@ -50,7 +50,7 @@ export default function HeroSection() {
                   </motion.span>
                 ))}
 
-              <span className="relative bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent whitespace-nowrap leading-none pb-1">
+              <span className="relative inline-block bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent whitespace-nowrap pb-1">
                 {text
                   .slice(nameStart)
                   .split("")

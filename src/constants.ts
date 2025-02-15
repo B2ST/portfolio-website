@@ -3,7 +3,7 @@ export const RESEARCH = {
   conference: "International Conference of Unmanned Aircraft Systems (ICUAS) 2020, IEEE Explore",
   period: "MAR 2019 – MAY 2020",
   link: "https://ieeexplore.ieee.org/document/9213927",
-  description: "Research focused on autonomous UAV navigation in GPS-denied environments, specifically for detecting surface water bodies. Published in a prestigious IEEE conference."
+  description: "Research focused on autonomous UAV navigation in GPS-denied environments, such as Mars, specifically for detecting surface water bodies."
 };
 
 export const SKILLS = {
