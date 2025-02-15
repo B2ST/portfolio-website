@@ -28,7 +28,7 @@ export default function ContactSection() {
         >
           <Button
             variant="outline"
-            className="w-full max-w-md gap-2"
+            className="w-full max-w-md gap-2 hover:bg-purple-200"
             onClick={() =>
               (window.location.href = "mailto:108.arnav@gmail.com")
             }
@@ -39,7 +39,7 @@ export default function ContactSection() {
 
           <Button
             variant="outline"
-            className="w-full max-w-md gap-2"
+            className="w-full max-w-md gap-2 hover:bg-purple-200"
             onClick={() =>
               window.open(
                 "https://linkedin.com/in/arnav-singh-a91528137",

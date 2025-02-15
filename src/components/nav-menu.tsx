@@ -14,12 +14,19 @@ export default function NavMenu() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
+    setIsOpen(false); // Close menu first
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        requestAnimationFrame(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
+    }, 0);
   };
 
-  const menuItems = ["about", "skills", "experience", "contact"];
+  const menuItems = ["home", "skills", "experience", "contact"];
 
   return (
     <motion.nav
@@ -29,12 +36,13 @@ export default function NavMenu() {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <motion.span
+        <motion.button
+          onClick={() => scrollToSection("home")}
           className="font-bold relative bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent whitespace-nowrap leading-none pb-1"
           whileHover={{ scale: 1.05 }}
         >
           Arnav Singh
-        </motion.span>
+        </motion.button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-4">

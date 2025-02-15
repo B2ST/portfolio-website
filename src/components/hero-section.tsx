@@ -29,7 +29,7 @@ export default function HeroSection() {
   const nameStart = text.indexOf("Arnav Singh");
 
   return (
-    <section id="about" className="min-h-screen relative overflow-visible">
+    <section id="home" className="min-h-screen relative overflow-visible">
       <HeroBackground />
 
       {/* Content */}
